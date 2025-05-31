@@ -1,0 +1,10 @@
+&adc {
+    status = "okay";
+};
+
+/ {
+    zephyr,user {
+        io-channels = <&adc 0>;
+        io-channel-names = "VBAT";
+    };
+};

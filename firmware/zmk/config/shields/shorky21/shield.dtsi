@@ -1,0 +1,43 @@
+/ {
+    chosen {
+        zmk,keyboard = &custom_kb;
+    };
+
+    custom_kb: custom_kb {
+        compatible = "zmk,keyboard";
+        matrix-row-gpios = <&gpio0 17 GPIO_ACTIVE_HIGH>,
+                           <&gpio0 20 GPIO_ACTIVE_HIGH>,
+                           <&gpio0 22 GPIO_ACTIVE_HIGH>,
+                           <&gpio0 24 GPIO_ACTIVE_HIGH>,
+                           <&gpio1 0 GPIO_ACTIVE_HIGH>;
+        matrix-col-gpios = <&gpio1 11 GPIO_ACTIVE_HIGH>,
+                           <&gpio0 11 GPIO_ACTIVE_HIGH>,
+                           <&gpio1 13 GPIO_ACTIVE_HIGH>,
+                           <&gpio1 15 GPIO_ACTIVE_HIGH>,
+                           <&gpio0 31 GPIO_ACTIVE_HIGH>;
+
+        diode-direction = <ROW2COL>;
+
+        encoder-0 {
+            compatible = "zmk,encoder";
+            a-gpios = <&gpio0 29 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            b-gpios = <&gpio0 2 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            label = "Left Encoder";
+        };
+
+        encoder-1 {
+            compatible = "zmk,encoder";
+            a-gpios = <&gpio1 4 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            b-gpios = <&gpio1 6 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            label = "Right Encoder";
+        };
+
+        rgb-strip {
+            compatible = "zmk,rgb-strip";
+            color-order = <RGB>;
+            chain-length = <4>;
+            io-gpios = <&gpio0 6 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            label = "RGB LED Strip";
+        };
+    };
+};
