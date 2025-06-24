@@ -1,7 +1,7 @@
 # Shorky21 - Rev 1
 
 21 key macro pad with twin rotary encoders
-![Shorky21-rev1](https://github.com/gzowski/shorky21/images/lights.jpg)
+![Shorky21-rev1](https://github.com/gzowski/shorky21/blob/main/images/lights.jpg)
 
 PCB available for purchase via my Etsy page: "when i add it"
 
