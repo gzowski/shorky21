@@ -1,3 +1,0 @@
-config SHIELD_SHORKY21
-    bool "Custom Shield"
-    select ZMK_KEYBOARD

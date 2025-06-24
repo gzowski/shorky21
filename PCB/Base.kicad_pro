@@ -230,7 +230,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "PCB2.kicad_pro",
+    "filename": "Base.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -269,7 +269,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "Base.stl",
       "svg": "",
       "vrml": ""
     },
